@@ -105,11 +105,11 @@ export function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.nav
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-stone-200 bg-paper lg:hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="border-t border-stone-200 bg-paper lg:hidden"
             aria-label="Navegación móvil"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
