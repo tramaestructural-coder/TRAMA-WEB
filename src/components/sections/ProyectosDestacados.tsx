@@ -1,6 +1,3 @@
-"use client";
-
-import { useRef } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -8,17 +5,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { proyectos } from "@/data/proyectos";
 
-const ordenados = [...proyectos].sort((a, b) => a.orden - b.orden);
+const destacados = [...proyectos].sort((a, b) => a.orden - b.orden).slice(0, 8);
 
 export function ProyectosDestacados() {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 1 | -1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    el.scrollBy({ left: direction * el.clientWidth * 0.9, behavior: "smooth" });
-  };
-
   return (
     <section id="proyectos" className="bg-trama bg-paper py-24 lg:py-32">
       <Container>
@@ -41,37 +30,10 @@ export function ProyectosDestacados() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative mt-14">
-            <div
-              ref={scrollerRef}
-              className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            >
-              {ordenados.map((proyecto) => (
-                <div
-                  key={proyecto.slug}
-                  className="w-[62vw] flex-none snap-start sm:w-[34vw] lg:w-[21vw]"
-                >
-                  <ProjectCard proyecto={proyecto} />
-                </div>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              onClick={() => scroll(-1)}
-              className="absolute left-2 top-[38%] z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper text-ink shadow-lg shadow-ink/15 transition-colors hover:bg-sage-100 sm:left-4"
-              aria-label="Proyecto anterior"
-            >
-              ←
-            </button>
-            <button
-              type="button"
-              onClick={() => scroll(1)}
-              className="absolute right-2 top-[38%] z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper text-ink shadow-lg shadow-ink/15 transition-colors hover:bg-sage-100 sm:right-4"
-              aria-label="Siguiente proyecto"
-            >
-              →
-            </button>
+          <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
+            {destacados.map((proyecto) => (
+              <ProjectCard key={proyecto.slug} proyecto={proyecto} href="/proyectos" />
+            ))}
           </div>
         </Reveal>
       </Container>

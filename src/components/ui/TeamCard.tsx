@@ -20,7 +20,7 @@ export function TeamCard({ miembro }: { miembro: MiembroEquipo }) {
             alt={miembro.nombre}
             fill
             sizes="(min-width: 1024px) 33vw, 100vw"
-            className="object-cover"
+            className="object-contain object-bottom p-4"
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 border border-dashed border-stone-400 bg-stone-100 text-stone-400">

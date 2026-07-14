@@ -1,17 +1,11 @@
-"use client";
-
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
 import { servicios } from "@/data/servicios";
-import { easeTrama } from "@/lib/motion";
 
 export function ServiciosPreview() {
-  const [open, setOpen] = useState<number | null>(null);
-
   return (
     <section className="bg-trama bg-stone-50 py-24 lg:py-32">
       <Container>
@@ -23,51 +17,32 @@ export function ServiciosPreview() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-14 divide-y divide-stone-300 border-y border-stone-300">
-            {servicios.map((servicio, i) => {
-              const isOpen = open === i;
-              const Icon = servicio.icon;
-              return (
-                <div key={servicio.slug}>
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-6 py-6 text-left"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="flex items-center gap-5">
-                      <Icon className="h-6 w-6 shrink-0 text-walnut-500" strokeWidth={1.5} aria-hidden />
-                      <span className="font-display text-xl text-ink sm:text-2xl">
-                        {servicio.nombre}
-                      </span>
+          <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {servicios.map((servicio) => (
+              <Link
+                key={servicio.slug}
+                href="/servicios"
+                className="group relative aspect-square overflow-hidden rounded-2xl bg-stone-200"
+              >
+                <Image
+                  src={servicio.imagen}
+                  alt={servicio.nombre}
+                  fill
+                  sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
+                  className="object-cover transition-transform duration-500 ease-trama group-hover:scale-110"
+                />
+                <div className="absolute inset-x-0 bottom-0 translate-y-full bg-espresso-500/95 px-4 py-3 transition-transform duration-500 ease-trama group-hover:translate-y-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-sm font-medium leading-tight text-paper">
+                      {servicio.nombre}
                     </span>
-                    <span
-                      className={`text-2xl text-ink/50 transition-transform duration-500 ease-trama ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                      aria-hidden
-                    >
-                      +
+                    <span className="shrink-0 rounded-full border border-paper/40 px-3 py-1 text-xs uppercase tracking-wide text-paper transition-colors group-hover:bg-paper group-hover:text-espresso-500">
+                      Ver más
                     </span>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.4, ease: easeTrama }}
-                        className="overflow-hidden"
-                      >
-                        <p className="max-w-2xl pb-6 pl-[2.75rem] text-base leading-relaxed text-ink/65">
-                          {servicio.resumen}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  </div>
                 </div>
-              );
-            })}
+              </Link>
+            ))}
           </div>
         </Reveal>
 

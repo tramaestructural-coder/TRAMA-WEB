@@ -11,19 +11,19 @@ export const equipo: MiembroEquipo[] = [
   {
     nombre: "Juan Enrique Castro",
     rol: "Ingeniero Civil Estructural",
-    foto: null,
+    foto: "/images/equipo/juan-enrique.png",
     bio: null,
   },
   {
     nombre: "Martín Villalta",
     rol: "Arquitecto",
-    foto: null,
+    foto: "/images/equipo/martin.png",
     bio: null,
   },
   {
     nombre: "Josefa Araneda",
     rol: "Arquitecta",
-    foto: null,
+    foto: "/images/equipo/josefa.png",
     bio: null,
   },
 ];

@@ -11,10 +11,7 @@ export function EquipoPreview() {
       <Container>
         <Reveal>
           <SectionLabel index="05" title="Equipo" />
-          <h2 className="mt-6 max-w-lg font-display text-3xl leading-tight text-ink sm:text-4xl">
-            Los socios acompañan cada proyecto en persona.
-          </h2>
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-ink/70">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-ink/70">
             Visitas, diseño, presupuesto, coordinación, supervisión y
             entrega: quienes deciden son quienes están presentes.
           </p>
