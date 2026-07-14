@@ -5,7 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { nav, whatsappHref } from "@/lib/config";
+import { nav, evaluacionHref } from "@/lib/config";
+import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -75,14 +76,14 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <a
-              href={whatsappHref()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden rounded-full bg-celeste px-5 py-2.5 text-xs font-medium text-ink transition-colors hover:bg-celeste/80 lg:inline-block"
+            <Button
+              href={evaluacionHref()}
+              variant="accent"
+              size="sm"
+              className="hidden lg:inline-flex"
             >
               Solicitar evaluación
-            </a>
+            </Button>
 
             <button
               type="button"
@@ -126,14 +127,9 @@ export function Navbar() {
                 </li>
               ))}
               <li className="pt-2">
-                <a
-                  href={whatsappHref()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-celeste px-5 py-2.5 text-sm font-medium text-ink"
-                >
+                <Button href={evaluacionHref()} variant="accent">
                   Solicitar evaluación
-                </a>
+                </Button>
               </li>
             </ul>
           </motion.nav>

@@ -5,19 +5,25 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
 import { servicios } from "@/data/servicios";
 
-export function ServiciosPreview() {
+export function ServiciosPreview({
+  index = "02",
+  showCta = true,
+}: {
+  index?: string;
+  showCta?: boolean;
+}) {
   return (
-    <section className="bg-trama bg-stone-50 py-24 lg:py-32">
+    <section className="bg-trama bg-stone-50 py-28 lg:py-40">
       <Container>
         <Reveal>
-          <SectionLabel index="02" title="Servicios" />
+          <SectionLabel index={index} title="Servicios" />
           <h2 className="mt-6 max-w-lg font-display text-3xl leading-tight text-ink sm:text-4xl">
             Lo que realmente ofrecemos.
           </h2>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
             {servicios.map((servicio) => (
               <Link
                 key={servicio.slug}
@@ -46,14 +52,16 @@ export function ServiciosPreview() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.2}>
-          <Link
-            href="/servicios"
-            className="mt-10 inline-block text-sm uppercase tracking-wide text-walnut-500 hover:text-walnut-700"
-          >
-            Ver todos los servicios →
-          </Link>
-        </Reveal>
+        {showCta && (
+          <Reveal delay={0.2}>
+            <Link
+              href="/servicios"
+              className="mt-10 inline-block text-sm uppercase tracking-wide text-walnut-500 hover:text-walnut-700"
+            >
+              Ver todos los servicios →
+            </Link>
+          </Reveal>
+        )}
       </Container>
     </section>
   );

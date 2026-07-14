@@ -1,24 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Inter, Archivo } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { site } from "@/lib/config";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const archivo = Archivo({
-  subsets: ["latin"],
-  variable: "--font-archivo",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -45,7 +31,7 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${archivo.variable}`}>
+    <html lang="es">
       <body className="font-sans antialiased">
         <a
           href="#contenido"

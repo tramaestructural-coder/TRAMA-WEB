@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Presentacion() {
   return (
-    <section className="bg-trama bg-paper py-24 lg:py-32">
+    <section className="bg-trama bg-paper py-28 lg:py-40">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
@@ -29,7 +29,7 @@ export function Presentacion() {
                 imprevistos y construimos respetando exactamente lo
                 acordado.
               </p>
-              <p className="font-display text-lg text-ink">
+              <p className="font-sans text-lg font-medium text-ink">
                 No vendemos solo construcción. Vendemos tranquilidad,
                 confianza y certeza.
               </p>

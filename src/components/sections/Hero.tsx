@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { easeTrama } from "@/lib/motion";
-import { whatsappHref } from "@/lib/config";
+import { evaluacionHref } from "@/lib/config";
+import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 0.7, ease: easeTrama, delay: 0.1 }}
           className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] text-paper sm:text-5xl lg:text-6xl"
         >
-          Diseñamos pensando en construir.
+          Diseñamos, proyectamos y construimos espacios pensados para durar.
         </motion.h1>
 
         <motion.p
@@ -56,20 +56,12 @@ export function Hero() {
           transition={{ duration: 0.7, ease: easeTrama, delay: 0.3 }}
           className="mt-9 flex flex-wrap items-center gap-4"
         >
-          <a
-            href={whatsappHref()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-paper px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-sage-300"
-          >
+          <Button href={evaluacionHref()} variant="light">
             Solicitar evaluación
-          </a>
-          <Link
-            href="/proyectos"
-            className="rounded-full border border-paper/40 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:border-paper"
-          >
+          </Button>
+          <Button href="/proyectos" variant="secondary" className="text-paper">
             Ver proyectos
-          </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

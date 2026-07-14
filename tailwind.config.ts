@@ -7,7 +7,9 @@ import type { Config } from "tailwindcss";
 // misma familia cálida para no introducir un color ajeno a la marca.
 const colors = {
   paper: "#F7F5F1",
-  ink: "#1C1712",
+  // Suavizado desde #1C1712 para mejorar la lectura en bloques largos de
+  // texto — sigue leyéndose como negro, con menos dureza en pantalla.
+  ink: "#2A241D",
   stone: {
     DEFAULT: "#C4C1BD",
     50: "#F7F5F1",
@@ -51,21 +53,11 @@ const config: Config = {
   theme: {
     extend: {
       colors,
+      // Helvetica real como fuente principal (antes se cargaban Inter y
+      // Archivo desde Google Fonts, con Helvetica solo como respaldo).
       fontFamily: {
-        sans: [
-          "var(--font-inter)",
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
-        display: [
-          "var(--font-archivo)",
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
+        sans: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        display: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
       },
       maxWidth: {
         content: "1400px",

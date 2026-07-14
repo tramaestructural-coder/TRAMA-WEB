@@ -4,8 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 import { proyectos } from "@/data/proyectos";
-import { whatsappHref } from "@/lib/config";
+import { evaluacionHref } from "@/lib/config";
 
 export function generateStaticParams() {
   return proyectos.map((p) => ({ slug: p.slug }));
@@ -67,7 +68,7 @@ export default async function ProyectoDetailPage({
               <span className="text-xs uppercase tracking-widest text-walnut-500">
                 {proyecto.tipologia}
               </span>
-              <h1 className="mt-3 font-display text-3xl text-ink sm:text-4xl">
+              <h1 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">
                 {proyecto.titulo}
               </h1>
             </div>
@@ -120,16 +121,13 @@ export default async function ProyectoDetailPage({
         )}
 
         <Reveal delay={0.15} className="mt-16 flex flex-wrap items-center gap-6 border-t border-stone-300 pt-10">
-          <a
-            href={whatsappHref(
-              `Hola Trama Estructural, vi el proyecto "${proyecto.titulo}" y quiero solicitar una evaluación.`
+          <Button
+            href={evaluacionHref(
+              `Solicitud de evaluación de proyecto — vi "${proyecto.titulo}" y quiero más información.`
             )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-espresso-500 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-walnut-500"
           >
             Solicitar evaluación
-          </a>
+          </Button>
           <Link
             href="/proyectos"
             className="text-sm uppercase tracking-wide text-walnut-500 hover:text-walnut-700"

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
+import { ServiciosPreview } from "@/components/sections/ServiciosPreview";
 import { Metodologia } from "@/components/sections/Metodologia";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { servicios } from "@/data/servicios";
@@ -16,12 +19,12 @@ export const metadata: Metadata = {
 export default function ServiciosPage() {
   return (
     <>
-      <section className="bg-trama bg-paper pb-20 pt-40 lg:pb-28 lg:pt-48">
+      <section className="bg-trama bg-paper pb-24 pt-40 lg:pb-32 lg:pt-48">
         <Container>
           <Reveal>
             <SectionLabel index="00" title="Servicios" />
             <h1 className="mt-6 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
-              Lo que realmente ofrecemos.
+              Todo lo que hacemos, bajo un mismo equipo.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
               No coordinamos a distintos proveedores para tu proyecto: los
@@ -29,35 +32,58 @@ export default function ServiciosPage() {
               supervisa, de principio a fin.
             </p>
           </Reveal>
+        </Container>
+      </section>
 
-          <div className="mt-20 grid gap-px overflow-hidden bg-stone-300 sm:grid-cols-2 lg:grid-cols-3">
-            {servicios.map((servicio, i) => {
-              const Icon = servicio.icon;
-              return (
-                <Reveal key={servicio.slug} delay={i * 0.06} className="bg-paper p-8">
-                  <Icon className="h-7 w-7 text-walnut-500" strokeWidth={1.5} aria-hidden />
-                  <h2 className="mt-4 font-display text-xl text-ink">
+      <ServiciosPreview index="01" showCta={false} />
+
+      <section className="bg-trama bg-paper py-28 lg:py-40">
+        <Container>
+          <Reveal>
+            <SectionLabel index="02" title="En detalle" />
+            <h2 className="mt-6 max-w-lg font-display text-3xl leading-tight text-ink sm:text-4xl">
+              Cada servicio, a fondo.
+            </h2>
+          </Reveal>
+
+          <div className="mt-16 space-y-20 lg:space-y-28">
+            {servicios.map((servicio, i) => (
+              <Reveal
+                key={servicio.slug}
+                className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+                  i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
+                }`}
+              >
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone-200">
+                  <Image
+                    src={servicio.imagen}
+                    alt={servicio.nombre}
+                    fill
+                    sizes="(min-width: 1024px) 45vw, 100vw"
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-display text-2xl text-ink">
                     {servicio.nombre}
-                  </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/65">
+                  </h3>
+                  <p className="mt-4 max-w-md text-base leading-relaxed text-ink/70">
                     {servicio.resumen}
                   </p>
-                </Reveal>
-              );
-            })}
+                </div>
+              </Reveal>
+            ))}
           </div>
 
-          <Reveal delay={0.2}>
-            <a
+          <Reveal delay={0.1}>
+            <Button
               href={whatsappHref(
                 "Hola Trama Estructural, quiero conversar sobre los servicios que ofrecen."
               )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-14 inline-block rounded-full bg-espresso-500 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-walnut-500"
+              className="mt-20"
             >
               Conversar por WhatsApp
-            </a>
+            </Button>
           </Reveal>
         </Container>
       </section>

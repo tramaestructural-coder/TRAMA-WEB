@@ -51,10 +51,16 @@ export function Footer() {
               supervisión bajo un mismo equipo. Diseñamos pensando en
               construir.
             </p>
+            <Link
+              href="/contacto"
+              className="mt-5 inline-block text-sm text-paper transition-colors hover:text-paper/70"
+            >
+              ¿Tienes un proyecto en mente? Conversemos →
+            </Link>
           </div>
 
           <div>
-            <h3 className="text-xs uppercase tracking-widest text-paper/50">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-paper/50">
               Navegación
             </h3>
             <ul className="mt-4 space-y-2.5">
@@ -72,10 +78,18 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs uppercase tracking-widest text-paper/50">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-paper/50">
               Contacto
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-paper/80">
+              <li>
+                <a
+                  href={`mailto:${site.contactEmail}`}
+                  className="transition-colors hover:text-paper"
+                >
+                  {site.contactEmail}
+                </a>
+              </li>
               <li>
                 <a
                   href={whatsappHref()}
@@ -96,12 +110,11 @@ export function Footer() {
                   Instagram — {site.instagramHandle}
                 </a>
               </li>
-              <li>{site.domain}</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xs uppercase tracking-widest text-paper/50">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-paper/50">
               Socios
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-paper/80">

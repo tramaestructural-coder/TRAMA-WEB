@@ -2,16 +2,22 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
+import { ArticuloCard } from "@/components/ui/ArticuloCard";
+import { articulos } from "@/data/articulos";
+
+const recientes = [...articulos]
+  .sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
+  .slice(0, 3);
 
 export function BibliotecaPreview() {
   return (
-    <section className="bg-trama bg-paper py-24 lg:py-32">
+    <section className="bg-trama bg-paper py-28 lg:py-40">
       <Container>
         <Reveal>
           <SectionLabel index="06" title="Biblioteca" />
           <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
             <h2 className="max-w-lg font-display text-3xl leading-tight text-ink sm:text-4xl">
-              Contenido técnico, en construcción.
+              Contenido técnico para tu proyecto.
             </h2>
             <Link
               href="/biblioteca"
@@ -23,19 +29,9 @@ export function BibliotecaPreview() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-14 grid gap-6 sm:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <div
-                key={n}
-                className="flex aspect-[4/3] flex-col justify-between border border-dashed border-stone-300 bg-stone-50 p-6"
-              >
-                <span className="text-xs uppercase tracking-widest text-ink/30">
-                  Próximamente
-                </span>
-                <span className="font-display text-lg text-ink/25">
-                  Artículo técnico
-                </span>
-              </div>
+          <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-3">
+            {recientes.map((articulo) => (
+              <ArticuloCard key={articulo.slug} articulo={articulo} />
             ))}
           </div>
         </Reveal>

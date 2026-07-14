@@ -10,12 +10,18 @@ export const site = {
   contactEmail: "contacto@tramaestructural.cl",
   whatsappNumber: "56961341036",
   whatsappDefaultMessage:
-    "Hola! Me gustaría agendar una visita para mi proyecto...",
+    "Hola, mi nombre es [nombre].\nEstoy en [comuna/ciudad] y me interesa un proyecto de [tipo de proyecto].\n¿Podrían darme más información?",
 };
 
 export function whatsappHref(message: string = site.whatsappDefaultMessage) {
   const encoded = encodeURIComponent(message);
   return `https://wa.me/${site.whatsappNumber}?text=${encoded}`;
+}
+
+// "Solicitar evaluación" ya no abre WhatsApp: lleva al formulario de
+// contacto con el mensaje precargado (sigue siendo editable ahí).
+export function evaluacionHref(mensaje = "Solicitud de evaluación de proyecto") {
+  return `/contacto?mensaje=${encodeURIComponent(mensaje)}`;
 }
 
 export const nav = [

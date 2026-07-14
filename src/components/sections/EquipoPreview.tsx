@@ -7,7 +7,7 @@ import { equipo } from "@/data/equipo";
 
 export function EquipoPreview() {
   return (
-    <section className="bg-trama bg-stone-50 py-24 lg:py-32">
+    <section className="bg-trama bg-stone-50 py-28 lg:py-40">
       <Container>
         <Reveal>
           <SectionLabel index="05" title="Equipo" />
@@ -17,7 +17,7 @@ export function EquipoPreview() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {equipo.map((miembro, i) => (
             <Reveal key={miembro.nombre} delay={i * 0.1}>
               <TeamCard miembro={miembro} />

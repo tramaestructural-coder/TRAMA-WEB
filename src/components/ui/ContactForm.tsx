@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
+import { Button } from "@/components/ui/Button";
 
 type Estado = "idle" | "loading" | "success" | "error";
 
 export function ContactForm() {
   const [estado, setEstado] = useState<Estado>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const mensajePrecargado = useSearchParams().get("mensaje") ?? "";
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -86,6 +89,7 @@ export function ContactForm() {
           name="mensaje"
           required
           rows={4}
+          defaultValue={mensajePrecargado}
           className="mt-2 w-full resize-none border-b border-stone-300 bg-transparent py-2 text-base text-ink outline-none transition-colors focus:border-walnut-500"
         />
       </div>
@@ -94,13 +98,9 @@ export function ContactForm() {
         <p className="text-sm text-walnut-700">{errorMsg}</p>
       )}
 
-      <button
-        type="submit"
-        disabled={estado === "loading"}
-        className="rounded-full bg-espresso-500 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-walnut-500 disabled:opacity-50"
-      >
+      <Button type="submit" disabled={estado === "loading"}>
         {estado === "loading" ? "Enviando..." : "Enviar mensaje"}
-      </button>
+      </Button>
     </form>
   );
 }
