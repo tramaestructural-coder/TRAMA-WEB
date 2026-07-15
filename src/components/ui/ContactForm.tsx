@@ -63,7 +63,7 @@ export function ContactForm() {
           name="nombre"
           type="text"
           required
-          className="mt-2 w-full border-b border-stone-300 bg-transparent py-2 text-base text-ink outline-none transition-colors focus:border-walnut-500"
+          className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-base text-ink outline-none transition-colors focus:border-walnut-500"
         />
       </div>
 
@@ -76,7 +76,7 @@ export function ContactForm() {
           name="correo"
           type="email"
           required
-          className="mt-2 w-full border-b border-stone-300 bg-transparent py-2 text-base text-ink outline-none transition-colors focus:border-walnut-500"
+          className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-base text-ink outline-none transition-colors focus:border-walnut-500"
         />
       </div>
 
@@ -90,7 +90,7 @@ export function ContactForm() {
           required
           rows={4}
           defaultValue={mensajePrecargado}
-          className="mt-2 w-full resize-none border-b border-stone-300 bg-transparent py-2 text-base text-ink outline-none transition-colors focus:border-walnut-500"
+          className="mt-2 w-full resize-none rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-base text-ink outline-none transition-colors focus:border-walnut-500"
         />
       </div>
 
