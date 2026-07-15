@@ -16,7 +16,7 @@ export type PasoMetodologia = {
 // Proceso de trabajo definido por el cliente, en orden.
 export const metodologia: PasoMetodologia[] = [
   {
-    nombre: "Levantamiento info",
+    nombre: "Levantamiento información",
     resumen: "Visitamos el lugar y recopilamos toda la información necesaria para partir con el pie derecho.",
     icon: LevantamientoIcon,
   },

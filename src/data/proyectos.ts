@@ -118,14 +118,14 @@ export const proyectos: Proyecto[] = [
     imagenes: ["/images/proyectos/quincho-jorge/cover.jpg"],
   },
   {
-    slug: "casa-maca",
-    titulo: "Casa Maca",
+    slug: "ampliacion-macarena",
+    titulo: "Ampliación Macarena",
     tipologia: "Colaboración",
     orden: 8,
     colaboracionDimod: true,
     fichaPendiente: true,
-    cover: "/images/proyectos/casa-maca/cover.jpg",
-    imagenes: ["/images/proyectos/casa-maca/cover.jpg"],
+    cover: "/images/proyectos/ampliacion-macarena/cover.jpg",
+    imagenes: ["/images/proyectos/ampliacion-macarena/cover.jpg"],
   },
   {
     slug: "pergola-romeral",

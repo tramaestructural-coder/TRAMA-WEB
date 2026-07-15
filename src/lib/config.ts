@@ -5,8 +5,8 @@ export const site = {
   name: "Trama Estructural",
   domain: "tramaestructural.cl",
   url: "https://tramaestructural.cl",
-  instagram: "https://www.instagram.com/tramaestructural",
-  instagramHandle: "@tramaestructural",
+  instagram: "https://www.instagram.com/trama_estructural",
+  instagramHandle: "@trama_estructural",
   contactEmail: "contacto@tramaestructural.cl",
   whatsappNumber: "56961341036",
   whatsappDefaultMessage:

@@ -34,21 +34,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: easeTrama, delay: 0.1 }}
-          className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] text-paper sm:text-5xl lg:text-6xl"
+          className="mt-4 font-display text-6xl leading-[0.95] text-paper sm:text-7xl lg:text-8xl"
         >
-          Diseñamos, proyectamos y construimos espacios pensados para durar.
+          <span className="block">Diseñamos</span>
+          <span className="block">Proyectamos</span>
+          <span className="block">Construimos</span>
         </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: easeTrama, delay: 0.2 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-paper/80 sm:text-lg"
-        >
-          Arquitectura, ingeniería, presupuesto, construcción y supervisión
-          bajo un mismo equipo — de principio a fin, sin sorpresas en el
-          camino.
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}

@@ -96,7 +96,7 @@ export default async function ArticuloDetailPage({
     .slice(0, 3);
 
   return (
-    <article className="bg-trama bg-paper pb-28 pt-32 lg:pb-40 lg:pt-36">
+    <article className="bg-trama bg-paper pb-24 pt-32 lg:pb-36 lg:pt-36">
       <div className="relative h-[45vh] min-h-[320px] w-full bg-stone-200">
         <Image
           src={articulo.imagenDestacada}

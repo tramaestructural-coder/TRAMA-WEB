@@ -37,7 +37,7 @@ export default function ServiciosPage() {
 
       <ServiciosPreview index="01" showCta={false} />
 
-      <section className="bg-trama bg-paper py-28 lg:py-40">
+      <section className="bg-trama bg-paper py-24 lg:py-36">
         <Container>
           <Reveal>
             <SectionLabel index="02" title="En detalle" />

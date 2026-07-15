@@ -11,7 +11,7 @@ const recientes = [...articulos]
 
 export function BibliotecaPreview() {
   return (
-    <section className="bg-trama bg-paper py-28 lg:py-40">
+    <section className="bg-trama bg-paper py-24 lg:py-36">
       <Container>
         <Reveal>
           <SectionLabel index="06" title="Biblioteca" />

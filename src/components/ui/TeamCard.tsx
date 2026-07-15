@@ -13,7 +13,7 @@ function iniciales(nombre: string) {
 export function TeamCard({ miembro }: { miembro: MiembroEquipo }) {
   return (
     <div className="group">
-      <div className="relative aspect-[3/4] overflow-hidden bg-stone-200">
+      <div className="relative aspect-square overflow-hidden bg-stone-200">
         {miembro.foto ? (
           <Image
             src={miembro.foto}

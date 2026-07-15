@@ -7,7 +7,7 @@ import { equipo } from "@/data/equipo";
 
 export function EquipoPreview() {
   return (
-    <section className="bg-trama bg-stone-50 py-28 lg:py-40">
+    <section className="bg-trama bg-stone-50 py-24 lg:py-36">
       <Container>
         <Reveal>
           <SectionLabel index="05" title="Equipo" />

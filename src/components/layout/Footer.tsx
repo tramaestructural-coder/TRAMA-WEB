@@ -47,16 +47,16 @@ export function Footer() {
               className="h-7 w-auto invert"
             />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/70">
-              Arquitectura, ingeniería, presupuesto, construcción y
-              supervisión bajo un mismo equipo. Diseñamos pensando en
-              construir.
+              Arquitectura, ingeniería, construcción.
             </p>
-            <Link
-              href="/contacto"
+            <a
+              href={whatsappHref()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-block text-sm text-paper transition-colors hover:text-paper/70"
             >
               ¿Tienes un proyecto en mente? Conversemos →
-            </Link>
+            </a>
           </div>
 
           <div>
@@ -115,7 +115,7 @@ export function Footer() {
 
           <div>
             <h3 className="text-xs uppercase tracking-[0.2em] text-paper/50">
-              Socios
+              Equipo
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm text-paper/80">
               {equipo.map((m) => (
@@ -128,7 +128,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-2 border-t border-paper/10 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-4 border-t border-paper/10 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
+          <a
+            href="#"
+            aria-label="Volver arriba"
+            className="order-first flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper transition-colors hover:border-paper hover:bg-paper/10"
+          >
+            ↑
+          </a>
           <p>© {new Date().getFullYear()} Trama Estructural SpA. Todos los derechos reservados.</p>
         </div>
       </div>

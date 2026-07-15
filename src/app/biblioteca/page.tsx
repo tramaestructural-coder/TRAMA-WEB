@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function BibliotecaPage() {
   return (
-    <section className="bg-trama bg-paper pb-28 pt-40 lg:pb-40 lg:pt-48">
+    <section className="bg-trama bg-paper pb-24 pt-40 lg:pb-36 lg:pt-48">
       <Container>
         <Reveal>
           <SectionLabel index="00" title="Biblioteca" />

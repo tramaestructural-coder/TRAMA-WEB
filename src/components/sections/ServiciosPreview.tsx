@@ -13,7 +13,7 @@ export function ServiciosPreview({
   showCta?: boolean;
 }) {
   return (
-    <section className="bg-trama bg-stone-50 py-28 lg:py-40">
+    <section className="bg-trama bg-stone-50 py-24 lg:py-36">
       <Container>
         <Reveal>
           <SectionLabel index={index} title="Servicios" />

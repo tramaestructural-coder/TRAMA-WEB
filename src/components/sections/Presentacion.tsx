@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -6,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Presentacion() {
   return (
-    <section className="bg-trama bg-paper py-28 lg:py-40">
+    <section className="bg-trama bg-paper py-24 lg:py-36">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
@@ -43,13 +42,11 @@ export function Presentacion() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src="/images/general/quienes-somos.jpg"
-                alt="Espacio residencial remodelado por Trama Estructural"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
+            <div className="relative py-6">
+              <div className="mx-auto aspect-square w-[75%] bg-stone-200" aria-hidden />
+              <div
+                className="absolute left-[12.5%] top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 bg-celeste sm:h-56 sm:w-56"
+                aria-hidden
               />
             </div>
           </Reveal>
