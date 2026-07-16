@@ -2,11 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Proyecto } from "@/data/proyectos";
 
-export function ProjectCard({ proyecto, href }: { proyecto: Proyecto; href?: string }) {
+export function ProjectCard({
+  proyecto,
+  href,
+  aspect = "portrait",
+}: {
+  proyecto: Proyecto;
+  href?: string;
+  aspect?: "portrait" | "square";
+}) {
   return (
     <Link
       href={href ?? `/proyectos/${proyecto.slug}`}
-      className="group relative block aspect-[4/5] overflow-hidden rounded-2xl bg-stone-200"
+      className={`group relative block overflow-hidden rounded-2xl bg-stone-200 ${
+        aspect === "square" ? "aspect-square" : "aspect-[4/5]"
+      }`}
       aria-label={`Ver proyecto ${proyecto.titulo}`}
     >
       <Image

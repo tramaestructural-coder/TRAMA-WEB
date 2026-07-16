@@ -13,35 +13,40 @@ export const servicios: Servicio[] = [
   {
     slug: "arquitectura",
     nombre: "Arquitectura",
-    resumen: "Diseño arquitectónico completo, desde la idea hasta los planos listos para construir.",
+    resumen:
+      "Se integra un equipo multidisciplinario para diseñar a medida cada aspecto de tu proyecto. Se entregan documentos que permiten entender desde la base de la idea, hasta los aspectos formales de cada propuesta. Se desarrolla cada proyecto de manera que se entienda lo que se proyecta y no existan sorpresas.",
     icon: PencilRuler,
     imagen: "/images/servicios/arquitectura.png",
   },
   {
     slug: "construccion-llave-en-mano",
     nombre: "Construcción llave en mano",
-    resumen: "Ejecutamos la obra completa — coordinamos, construimos y entregamos el proyecto terminado.",
+    resumen:
+      "El equipo funciona desde la primera idea hasta la entrega del proyecto. Todo lo ve un mismo equipo, evitando problemas de ejecución y coordinación entre especialidades. Los proyectos los entregamos listos para ser habitados, llave en mano.",
     icon: HardHat,
     imagen: "/images/servicios/construccion-llave-en-mano.png",
   },
   {
     slug: "modelacion-3d",
     nombre: "Modelación 3D",
-    resumen: "Visualiza tu proyecto antes de construirlo con modelos tridimensionales realistas.",
+    resumen:
+      "Entregamos servicios de modelado en 3D, integrando programas de modelación y representación gráfica. Entregamos proyectos con el nivel de detalle que quiera cada cliente. Los modelos son entregados en archivos editables y las imágenes retocadas por nuestro equipo.",
     icon: Box,
     imagen: "/images/servicios/modelacion-3d.png",
   },
   {
     slug: "tramitacion-municipal",
     nombre: "Tramitación municipal",
-    resumen: "Gestionamos permisos de edificación y recepción municipal para que tu proyecto quede en regla.",
+    resumen:
+      "Para nuestro equipo es importante la responsabilidad legal. Nos encargamos de que nuestros proyectos cuenten con sus permisos al día y en norma. Trabajamos de la mano con arquitectos con experiencia en tramitación municipal, alineados con los artículos y decretos que ordena O.G.U.C.",
     icon: Stamp,
     imagen: "/images/servicios/tramitacion-municipal.png",
   },
   {
     slug: "calculo-estructural",
     nombre: "Cálculo estructural",
-    resumen: "Ingeniería estructural que garantiza la seguridad y el correcto comportamiento de tu proyecto.",
+    resumen:
+      "Nuestro equipo cuenta con experiencia en cálculo de estructuras con software especializados en modelación y cálculo de estructuras de diferentes materiales y dimensiones. Entregamos al cliente memorias de cálculo y archivos editables.",
     icon: Calculator,
     imagen: "/images/servicios/calculo-estructural.png",
   },

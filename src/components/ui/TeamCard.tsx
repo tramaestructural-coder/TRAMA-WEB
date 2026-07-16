@@ -32,7 +32,13 @@ export function TeamCard({ miembro }: { miembro: MiembroEquipo }) {
       <div className="mt-4">
         <h3 className="font-display text-lg text-ink">{miembro.nombre}</h3>
         <p className="text-sm text-ink/60">{miembro.rol}</p>
-        <p className="mt-2 text-sm italic text-ink/40">
+        <p
+          className={
+            miembro.bio
+              ? "mt-2 text-sm leading-relaxed text-ink/70"
+              : "mt-2 text-sm italic text-ink/40"
+          }
+        >
           {miembro.bio ?? "Biografía próximamente."}
         </p>
       </div>

@@ -5,7 +5,7 @@ import { evaluacionHref } from "@/lib/config";
 
 export function CTAFinal() {
   return (
-    <section className="bg-trama relative overflow-hidden bg-stone-50 py-24 text-ink lg:py-36">
+    <section className="bg-trama relative overflow-hidden bg-stone-50 py-16 text-ink lg:py-24">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl leading-tight sm:text-4xl">

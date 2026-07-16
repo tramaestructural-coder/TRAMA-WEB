@@ -8,13 +8,16 @@ export function Reveal({
   children,
   className,
   delay = 0,
+  id,
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
 }) {
   return (
     <motion.div
+      id={id}
       className={className}
       variants={fadeUp}
       initial="hidden"

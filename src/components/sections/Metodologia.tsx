@@ -7,7 +7,7 @@ import { evaluacionHref } from "@/lib/config";
 
 export function Metodologia() {
   return (
-    <section className="bg-trama bg-espresso-500 py-24 text-paper lg:py-36">
+    <section className="bg-trama bg-espresso-500 py-16 text-paper lg:py-24">
       <Container>
         <Reveal>
           <SectionLabel index="03" title="Metodología" onDark />

@@ -37,7 +37,7 @@ export default function ServiciosPage() {
 
       <ServiciosPreview index="01" showCta={false} />
 
-      <section className="bg-trama bg-paper py-24 lg:py-36">
+      <section className="bg-trama bg-paper py-16 lg:py-24">
         <Container>
           <Reveal>
             <SectionLabel index="02" title="En detalle" />
@@ -50,11 +50,12 @@ export default function ServiciosPage() {
             {servicios.map((servicio, i) => (
               <Reveal
                 key={servicio.slug}
-                className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+                id={servicio.slug}
+                className={`grid scroll-mt-24 items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
                   i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone-200">
+                <div className="relative aspect-square overflow-hidden rounded-2xl bg-stone-200">
                   <Image
                     src={servicio.imagen}
                     alt={servicio.nombre}

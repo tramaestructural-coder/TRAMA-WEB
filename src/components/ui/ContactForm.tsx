@@ -53,7 +53,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label htmlFor="nombre" className="text-xs uppercase tracking-wide text-ink/50">
           Nombre
@@ -88,7 +88,7 @@ export function ContactForm() {
           id="mensaje"
           name="mensaje"
           required
-          rows={4}
+          rows={3}
           defaultValue={mensajePrecargado}
           className="mt-2 w-full resize-none rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-base text-ink outline-none transition-colors focus:border-walnut-500"
         />

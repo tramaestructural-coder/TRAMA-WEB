@@ -5,25 +5,23 @@ export type MiembroEquipo = {
   bio: string | null;
 };
 
-// Roles confirmados por el cliente. Foto y biografía se agregan después:
-// se deja el espacio reservado en el diseño en vez de inventar contenido.
 export const equipo: MiembroEquipo[] = [
   {
     nombre: "Juan Enrique Castro",
     rol: "Ingeniero Civil Estructural",
     foto: "/images/equipo/juan-enrique.png",
-    bio: null,
+    bio: "Encargado de Ingeniería estructural, soluciones constructivas, desarrollo técnico, factibilidad de proyectos y optimización estructural.",
   },
   {
     nombre: "Martín Villalta",
-    rol: "Arquitecto",
+    rol: "Arquitecto, Mención en Diseño Sustentable",
     foto: "/images/equipo/martin.png",
-    bio: null,
+    bio: "Encargado del Diseño arquitectónico, desarrollo de proyectos, planimetría, visualización 3D y coordinación general.",
   },
   {
     nombre: "Josefa Araneda",
-    rol: "Arquitecta",
+    rol: "Arquitecta, Mención en Diseño Generativo",
     foto: "/images/equipo/josefa.png",
-    bio: null,
+    bio: "Encargada de Desarrollo arquitectónico, modelación y representación visual, presentaciones para clientes, diseño gráfico de proyectos, coordinación y seguimiento.",
   },
 ];

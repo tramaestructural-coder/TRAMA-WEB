@@ -5,12 +5,18 @@ import { Reveal } from "@/components/ui/Reveal";
 import { TeamCard } from "@/components/ui/TeamCard";
 import { equipo } from "@/data/equipo";
 
-export function EquipoPreview() {
+export function EquipoPreview({
+  index = "05",
+  showCta = true,
+}: {
+  index?: string;
+  showCta?: boolean;
+}) {
   return (
-    <section className="bg-trama bg-stone-50 py-24 lg:py-36">
+    <section className="bg-trama bg-stone-50 py-16 lg:py-24">
       <Container>
         <Reveal>
-          <SectionLabel index="05" title="Equipo" />
+          <SectionLabel index={index} title="Equipo" />
           <p className="mt-6 max-w-lg text-base leading-relaxed text-ink/70">
             Visitas, diseño, presupuesto, coordinación, supervisión y
             entrega: quienes deciden son quienes están presentes.
@@ -25,14 +31,16 @@ export function EquipoPreview() {
           ))}
         </div>
 
-        <Reveal delay={0.2}>
-          <Link
-            href="/nosotros"
-            className="mt-12 inline-block text-sm uppercase tracking-wide text-walnut-500 hover:text-walnut-700"
-          >
-            Conocer al equipo →
-          </Link>
-        </Reveal>
+        {showCta && (
+          <Reveal delay={0.2}>
+            <Link
+              href="/nosotros"
+              className="mt-12 inline-block text-sm uppercase tracking-wide text-walnut-500 hover:text-walnut-700"
+            >
+              Conocer al equipo →
+            </Link>
+          </Reveal>
+        )}
       </Container>
     </section>
   );

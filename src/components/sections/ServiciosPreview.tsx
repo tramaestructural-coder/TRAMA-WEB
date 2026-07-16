@@ -13,7 +13,7 @@ export function ServiciosPreview({
   showCta?: boolean;
 }) {
   return (
-    <section className="bg-trama bg-stone-50 py-24 lg:py-36">
+    <section className="bg-trama bg-stone-50 py-16 lg:py-24">
       <Container>
         <Reveal>
           <SectionLabel index={index} title="Servicios" />
@@ -27,7 +27,7 @@ export function ServiciosPreview({
             {servicios.map((servicio) => (
               <Link
                 key={servicio.slug}
-                href="/servicios"
+                href={`/servicios#${servicio.slug}`}
                 className="group relative aspect-square overflow-hidden rounded-2xl bg-stone-200"
               >
                 <Image

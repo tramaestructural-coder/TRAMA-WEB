@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   return (
-    <section className="bg-trama bg-paper pb-24 pt-40 lg:pb-36 lg:pt-48">
+    <section className="bg-trama bg-paper pb-12 pt-24 lg:pb-12 lg:pt-24">
       <Container>
         <Reveal>
           <SectionLabel index="00" title="Contacto" />
@@ -25,7 +25,7 @@ export default function ContactoPage() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-16 lg:grid-cols-2">
+        <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <Reveal>
             <ul className="space-y-4 text-sm text-ink/70">
               <li>
