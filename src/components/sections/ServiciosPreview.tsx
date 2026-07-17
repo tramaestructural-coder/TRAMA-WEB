@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -23,32 +22,24 @@ export function ServiciosPreview({
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
-            {servicios.map((servicio) => (
-              <Link
-                key={servicio.slug}
-                href={`/servicios#${servicio.slug}`}
-                className="group relative aspect-square overflow-hidden rounded-2xl bg-stone-200"
-              >
-                <Image
-                  src={servicio.imagen}
-                  alt={servicio.nombre}
-                  fill
-                  sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
-                  className="object-cover transition-transform duration-500 ease-trama group-hover:scale-110"
-                />
-                <div className="absolute inset-x-0 bottom-0 translate-y-full bg-espresso-500/95 px-4 py-3 transition-transform duration-500 ease-trama group-hover:translate-y-0">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-sm font-medium leading-tight text-paper">
-                      {servicio.nombre}
-                    </span>
-                    <span className="shrink-0 rounded-full border border-paper/40 px-3 py-1 text-xs uppercase tracking-wide text-paper transition-colors group-hover:bg-paper group-hover:text-espresso-500">
-                      Ver más
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
+            {servicios.map((servicio) => {
+              const Icon = servicio.icon;
+              return (
+                <Link
+                  key={servicio.slug}
+                  href={`/servicios#${servicio.slug}`}
+                  className="group flex flex-col items-center gap-3 text-center"
+                >
+                  <span className="flex h-20 w-20 items-center justify-center rounded-full border border-stone-300 text-walnut-500 transition-colors group-hover:border-walnut-500 group-hover:bg-walnut-500 group-hover:text-paper">
+                    <Icon className="h-8 w-8" strokeWidth={1.5} aria-hidden />
+                  </span>
+                  <span className="text-xs uppercase leading-snug tracking-wide text-ink/70">
+                    {servicio.nombre}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </Reveal>
 

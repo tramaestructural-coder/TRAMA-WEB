@@ -10,7 +10,7 @@ export const site = {
   contactEmail: "contacto@tramaestructural.cl",
   whatsappNumber: "56961341036",
   whatsappDefaultMessage:
-    "Hola, mi nombre es [nombre].\nEstoy en [comuna/ciudad] y me interesa un proyecto de [tipo de proyecto].\n¿Podrían darme más información?",
+    "Hola Trama Estructural. Me gustaría obtener más información sobre sus servicios y conversar sobre un proyecto. Quedo atento(a). Muchas gracias.",
 };
 
 export function whatsappHref(message: string = site.whatsappDefaultMessage) {

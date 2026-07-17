@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 import {
   ComercialesIcon,
   ExterioresIcon,
-  InterioresIcon,
+  RemodelacionesIcon,
   CasasIcon,
   ConceptualesIcon,
 } from "@/components/icons/CategoriaIcons";
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const categoriaIcons: Record<Categoria, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   "Proyectos comerciales": ComercialesIcon,
   Exteriores: ExterioresIcon,
-  Interiores: InterioresIcon,
+  Remodelaciones: RemodelacionesIcon,
   Casas: CasasIcon,
   Proyectos: ConceptualesIcon,
 };

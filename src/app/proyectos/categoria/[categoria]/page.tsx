@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -7,7 +8,7 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 import {
   ComercialesIcon,
   ExterioresIcon,
-  InterioresIcon,
+  RemodelacionesIcon,
   CasasIcon,
   ConceptualesIcon,
 } from "@/components/icons/CategoriaIcons";
@@ -16,7 +17,7 @@ import { proyectos, categoriaSlugs, type Categoria } from "@/data/proyectos";
 const categoriaIcons: Record<Categoria, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   "Proyectos comerciales": ComercialesIcon,
   Exteriores: ExterioresIcon,
-  Interiores: InterioresIcon,
+  Remodelaciones: RemodelacionesIcon,
   Casas: CasasIcon,
   Proyectos: ConceptualesIcon,
 };
@@ -63,7 +64,15 @@ export default async function CategoriaPage({
     <section className="bg-trama bg-paper pb-16 pt-28 lg:pb-24 lg:pt-32">
       <Container>
         <Reveal>
-          <SectionLabel index="00" title="Proyectos" />
+          <Link
+            href="/proyectos"
+            className="inline-flex items-center gap-2 text-sm uppercase tracking-wide text-walnut-500 hover:text-walnut-700"
+          >
+            ← Volver a Proyectos
+          </Link>
+          <div className="mt-8">
+            <SectionLabel index="00" title="Proyectos" />
+          </div>
           <div className="mt-6 flex items-center gap-4">
             <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-walnut-500 text-walnut-500">
               <Icon className="h-6 w-6" strokeWidth={1.5} aria-hidden />

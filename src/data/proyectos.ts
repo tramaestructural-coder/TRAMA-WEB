@@ -1,7 +1,7 @@
 export type Categoria =
   | "Proyectos comerciales"
   | "Exteriores"
-  | "Interiores"
+  | "Remodelaciones"
   | "Casas"
   | "Proyectos";
 
@@ -11,7 +11,7 @@ export type Categoria =
 export const categoriaSlugs: Record<Categoria, string> = {
   "Proyectos comerciales": "comerciales",
   Exteriores: "exteriores",
-  Interiores: "interiores",
+  Remodelaciones: "remodelaciones",
   Casas: "casas",
   Proyectos: "conceptuales",
 };
@@ -87,7 +87,7 @@ export const proyectos: Proyecto[] = [
     titulo: "Remodelación Depto. Kennedy",
     tipologia: "Vivienda",
     orden: 3,
-    categoria: "Interiores",
+    categoria: "Remodelaciones",
     fichaPendiente: false,
     ubicacion: "Vitacura, Santiago de Chile",
     m2: 48,
@@ -132,7 +132,7 @@ export const proyectos: Proyecto[] = [
     titulo: "Cocina Nueva — Lo Matta",
     tipologia: "Remodelación",
     orden: 5,
-    categoria: "Interiores",
+    categoria: "Remodelaciones",
     fichaPendiente: false,
     ubicacion: "Vitacura, Santiago de Chile",
     m2: 12,

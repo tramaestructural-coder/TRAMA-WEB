@@ -34,7 +34,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: easeTrama, delay: 0.1 }}
-          className="mt-4 font-display text-6xl leading-[0.95] text-paper sm:text-7xl lg:text-8xl"
+          className="mt-4 font-display text-6xl font-light leading-[0.95] text-paper sm:text-7xl lg:text-8xl"
         >
           <span className="block">Diseñamos</span>
           <span className="block">Proyectamos</span>

@@ -27,13 +27,13 @@ body {
   outline-offset: 3px;
 }
 
-/* Motivo "trama" oficial (isotipo T+E repetido), como textura de fondo
-   presente en todo el sitio. El archivo es un mosaico 2x2 espejado (original
-   + volteado horizontal + vertical + ambos) para que el patrón conecte sin
-   costuras al repetirse. Opacidad ~50%, pensada para no competir con el
-   contenido. */
+/* Motivo "trama" oficial (isotipo T+E repetido), extraído directamente de la
+   geometría vectorial del archivo CAD de la marca (ignorando capas y textos
+   auxiliares en naranjo). Mosaico 2x2 espejado, recortado sin márgenes para
+   que el patrón conecte sin costuras al repetirse. Escala grande y opacidad
+   baja para funcionar solo como textura, sin competir con el contenido. */
 .bg-trama {
   background-image: url("/images/general/trama-pattern.webp");
   background-repeat: repeat;
-  background-size: 600px auto;
+  background-size: 1100px 1100px;
 }

@@ -14,18 +14,18 @@ export const metadata: Metadata = {
 export default function NosotrosPage() {
   return (
     <>
-      <section className="bg-trama bg-paper pb-16 pt-28 lg:pb-20 lg:pt-32">
+      <section className="bg-trama bg-paper pb-12 pt-24 lg:pb-12 lg:pt-24">
         <Container>
           <Reveal>
             <SectionLabel index="00" title="Nosotros" />
-            <h1 className="mt-6 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
+            <h1 className="mt-4 max-w-2xl font-display text-3xl leading-tight text-ink sm:text-4xl">
               Un equipo de profesionales apasionados por el diseño y la
               construcción de espacios con carácter.
             </h1>
           </Reveal>
 
-          <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-            <Reveal delay={0.1} className="space-y-5 text-base leading-relaxed text-ink/70">
+          <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
+            <Reveal delay={0.1} className="space-y-4 text-base leading-relaxed text-ink/70">
               <p>
                 Trama Estructural nace de la observación de los patrones,
                 repeticiones y estructuras que emergen tanto en la
@@ -43,7 +43,7 @@ export default function NosotrosPage() {
 
             <Reveal delay={0.15}>
               {/* Foto grupal del equipo — pendiente de que el cliente la envíe */}
-              <div className="flex aspect-[4/3] items-center justify-center bg-stone-200 text-xs uppercase tracking-wide text-stone-400">
+              <div className="flex aspect-[16/10] items-center justify-center bg-stone-200 text-xs uppercase tracking-wide text-stone-400 lg:aspect-square">
                 Foto grupal próximamente
               </div>
             </Reveal>

@@ -13,24 +13,26 @@ export function Presentacion() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-stone-200 sm:aspect-[16/9]">
-            <Image
-              src="/images/general/axo-1.png"
-              alt="Axonometría de proyecto Trama Estructural"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-            <div className="absolute bottom-0 left-0 max-w-sm bg-celeste p-6 sm:max-w-md sm:p-8">
-              <p className="font-display text-lg leading-snug text-ink sm:text-xl">
+          <div className="relative mt-10 lg:mt-6">
+            <div className="ml-auto w-full sm:w-[75%] lg:w-[56%]">
+              <Image
+                src="/images/general/axo-1-sin-fondo.png"
+                alt="Axonometría de proyecto Trama Estructural"
+                width={1254}
+                height={848}
+                className="h-auto w-full object-contain"
+              />
+            </div>
+            <div className="relative z-10 -mt-4 max-w-md rounded-xl bg-paper/95 p-6 shadow-sm backdrop-blur-sm sm:p-8 lg:absolute lg:left-0 lg:top-1/2 lg:mt-0 lg:max-w-xl lg:-translate-y-1/2">
+              <p className="font-display text-2xl leading-snug text-ink sm:text-3xl">
                 Somos un equipo multidisciplinario, integramos arquitectura e
                 ingeniería y nos encargamos de todas las etapas de tu
                 proyecto.
               </p>
-              <p className="mt-3 font-display text-lg leading-snug text-ink sm:text-xl">
+              <p className="mt-4 font-display text-2xl leading-snug text-ink sm:text-3xl">
                 Diseñamos, Proyectamos y construimos.
               </p>
-              <p className="mt-3 font-display text-lg leading-snug text-ink sm:text-xl">
+              <p className="mt-4 font-display text-2xl leading-snug text-ink sm:text-3xl">
                 Somos Trama Estructural.
               </p>
             </div>

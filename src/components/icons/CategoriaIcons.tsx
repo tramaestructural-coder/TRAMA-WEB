@@ -37,7 +37,7 @@ export function ExterioresIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function InterioresIcon(props: SVGProps<SVGSVGElement>) {
+export function RemodelacionesIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 24 24"
