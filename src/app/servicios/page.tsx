@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Servicios",
   description:
     "Arquitectura, construcción llave en mano, modelación 3D, tramitación municipal y cálculo estructural, integrados en un mismo equipo.",
+  alternates: { canonical: "/servicios" },
 };
 
 export default function ServiciosPage() {

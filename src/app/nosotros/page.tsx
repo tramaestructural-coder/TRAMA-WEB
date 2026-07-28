@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Nosotros",
   description:
     "Conoce al equipo de Trama Estructural: los socios que acompañan personalmente cada proyecto, de principio a fin.",
+  alternates: { canonical: "/nosotros" },
 };
 
 export default function NosotrosPage() {

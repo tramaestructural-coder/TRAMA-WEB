@@ -20,6 +20,7 @@ export async function generateMetadata({
     description:
       proyecto.descripcion ??
       `${proyecto.titulo} — proyecto de ${proyecto.tipologia.toLowerCase()} ejecutado por Trama Estructural.`,
+    alternates: { canonical: `/proyectos/${proyecto.slug}` },
   };
 }
 

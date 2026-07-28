@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Proyectos",
   description:
     "Proyectos de remodelación y desarrollo integral ejecutados por Trama Estructural.",
+  alternates: { canonical: "/proyectos" },
 };
 
 const categoriaIcons: Record<Categoria, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {

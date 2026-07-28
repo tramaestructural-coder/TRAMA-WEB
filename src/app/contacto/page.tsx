@@ -9,6 +9,7 @@ import { site, whatsappHref } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Contacto",
   description: "Solicita una evaluación para tu proyecto con Trama Estructural.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {

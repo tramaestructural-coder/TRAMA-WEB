@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Biblioteca",
   description:
     "Artículos y contenido técnico de Trama Estructural sobre diseño, construcción, permisos y presupuesto.",
+  alternates: { canonical: "/biblioteca" },
 };
 
 export default function BibliotecaPage() {

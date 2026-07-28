@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/config";
-import { proyectos } from "@/data/proyectos";
+import { proyectos, categoriaSlugs } from "@/data/proyectos";
 import { articulos } from "@/data/articulos";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,6 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
+  const categoriaUrls: MetadataRoute.Sitemap = Object.values(categoriaSlugs).map((slug) => ({
+    url: `${site.url}/proyectos/categoria/${slug}`,
+    lastModified: new Date(),
+  }));
+
   const proyectosUrls: MetadataRoute.Sitemap = proyectos.map((p) => ({
     url: `${site.url}/proyectos/${p.slug}`,
     lastModified: new Date(),
@@ -26,5 +31,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(a.fecha),
   }));
 
-  return [...estaticas, ...proyectosUrls, ...articulosUrls];
+  return [...estaticas, ...categoriaUrls, ...proyectosUrls, ...articulosUrls];
 }

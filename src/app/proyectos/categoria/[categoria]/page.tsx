@@ -43,6 +43,7 @@ export async function generateMetadata({
   return {
     title: categoria,
     description: `Proyectos de Trama Estructural en la categoría ${categoria.toLowerCase()}.`,
+    alternates: { canonical: `/proyectos/categoria/${slug}` },
   };
 }
 

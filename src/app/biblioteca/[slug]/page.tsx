@@ -24,6 +24,7 @@ export async function generateMetadata({
   return {
     title: articulo.titulo,
     description: articulo.resumen,
+    alternates: { canonical: `/biblioteca/${articulo.slug}` },
     openGraph: {
       title: articulo.titulo,
       description: articulo.resumen,
@@ -95,8 +96,24 @@ export default async function ArticuloDetailPage({
     .filter((a) => a.slug !== articulo.slug && a.categoria === articulo.categoria)
     .slice(0, 3);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: articulo.titulo,
+    description: articulo.resumen,
+    image: `${site.url}${articulo.imagenDestacada}`,
+    datePublished: articulo.fecha,
+    author: { "@type": "Organization", name: site.name },
+    publisher: { "@type": "Organization", name: site.name },
+    mainEntityOfPage: `${site.url}/biblioteca/${articulo.slug}`,
+  };
+
   return (
     <article className="bg-trama bg-paper pb-24 pt-32 lg:pb-36 lg:pt-36">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="relative h-[45vh] min-h-[320px] w-full bg-stone-200">
         <Image
           src={articulo.imagenDestacada}
