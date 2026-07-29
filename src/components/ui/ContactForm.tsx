@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
+import { pushToDataLayer } from "@/lib/dataLayer";
 
 type Estado = "idle" | "loading" | "success" | "error";
 
@@ -35,6 +36,11 @@ export function ContactForm() {
         const body = await res.json().catch(() => null);
         throw new Error(body?.error ?? "No se pudo enviar el mensaje.");
       }
+
+      // Evento de conversión — solo tras confirmar éxito real de la API,
+      // para no contar envíos fallidos. El formulario no tiene campo de
+      // servicio de interés todavía, así que no se envía ese parámetro.
+      pushToDataLayer({ event: "contact_form_submit" });
 
       setEstado("success");
       form.reset();
