@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/nosotros",
     "/biblioteca",
     "/contacto",
+    "/politica-de-privacidad",
   ].map((ruta) => ({
     url: `${site.url}${ruta}`,
     lastModified: new Date(),

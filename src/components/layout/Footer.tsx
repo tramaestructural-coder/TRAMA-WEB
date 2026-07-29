@@ -136,7 +136,12 @@ export function Footer() {
           >
             ↑
           </a>
-          <p>© {new Date().getFullYear()} Trama Estructural SpA. Todos los derechos reservados.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p>© {new Date().getFullYear()} Trama Estructural SpA. Todos los derechos reservados.</p>
+            <Link href="/politica-de-privacidad" className="transition-colors hover:text-paper">
+              Política de privacidad
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
