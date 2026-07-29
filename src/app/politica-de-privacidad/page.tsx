@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PoliticaDePrivacidadPage() {
   return (
-    <section className="bg-trama bg-paper pb-16 pt-24 lg:pb-24 lg:pt-28">
+    <section className="bg-trama bg-paper pb-12 pt-20 lg:pb-20 lg:pt-24">
       <Container>
         <Reveal>
           <SectionLabel index="00" title="Política de privacidad" />
@@ -52,9 +52,10 @@ export default function PoliticaDePrivacidadPage() {
               <a href="/contacto" className="text-walnut-500 hover:text-walnut-700">
                 /contacto
               </a>
-              , recibimos el nombre, correo electrónico y mensaje que nos
-              escribes. No te pedimos ni recopilamos ningún otro dato personal
-              a través del formulario.
+              , recibimos el nombre, el correo electrónico o teléfono de
+              contacto que elijas dejar, y el mensaje que nos escribes. No te
+              pedimos ni recopilamos ningún otro dato personal a través del
+              formulario.
             </p>
           </div>
 

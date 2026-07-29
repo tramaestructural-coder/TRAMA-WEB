@@ -20,17 +20,19 @@ export const metadata: Metadata = {
 export default function ServiciosPage() {
   return (
     <>
-      <section className="bg-trama bg-paper pb-24 pt-40 lg:pb-32 lg:pt-48">
+      <section className="bg-trama bg-paper pb-16 pt-24 lg:pb-20 lg:pt-28">
         <Container>
           <Reveal>
             <SectionLabel index="00" title="Servicios" />
             <h1 className="mt-6 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
-              Todo lo que hacemos, bajo un mismo equipo.
+              Todo lo que hacemos, en un solo equipo.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
-              No coordinamos a distintos proveedores para tu proyecto: los
-              somos. El mismo equipo diseña, presupuesta, construye y
-              supervisa, de principio a fin.
+              Desde la primera conversación hasta la entrega final, un mismo
+              equipo diseña, planifica, construye y supervisa cada etapa del
+              proyecto. No coordinamos distintos proveedores: somos quienes
+              proyectamos, resolvemos y ejecutamos, asegurando continuidad,
+              comunicación y un resultado coherente de principio a fin.
             </p>
           </Reveal>
         </Container>
@@ -38,7 +40,7 @@ export default function ServiciosPage() {
 
       <ServiciosPreview index="01" showCta={false} />
 
-      <section className="bg-trama bg-paper py-16 lg:py-24">
+      <section className="bg-trama bg-paper py-12 lg:py-20">
         <Container>
           <Reveal>
             <SectionLabel index="02" title="En detalle" />

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   return (
-    <section className="bg-trama bg-paper pb-12 pt-24 lg:pb-12 lg:pt-24">
+    <section className="bg-trama bg-paper pb-10 pt-20 lg:pb-10 lg:pt-20">
       <Container>
         <Reveal>
           <SectionLabel index="00" title="Contacto" />
@@ -66,14 +66,9 @@ export default function ContactoPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <span className="text-xs uppercase tracking-widest text-ink/40">
-              Escríbenos
-            </span>
-            <div className="mt-4">
-              <Suspense fallback={null}>
-                <ContactForm />
-              </Suspense>
-            </div>
+            <Suspense fallback={null}>
+              <ContactForm />
+            </Suspense>
           </Reveal>
         </div>
       </Container>

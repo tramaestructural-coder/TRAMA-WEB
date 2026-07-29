@@ -7,6 +7,9 @@ import { pushToDataLayer } from "@/lib/dataLayer";
 
 type Estado = "idle" | "loading" | "success" | "error";
 
+const ES_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const ES_TELEFONO = /^[+]?[\d\s\-()]{7,20}$/;
+
 export function ContactForm() {
   const [estado, setEstado] = useState<Estado>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -14,14 +17,23 @@ export function ContactForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setEstado("loading");
     setErrorMsg(null);
 
     const form = e.currentTarget;
     const data = new FormData(form);
+    const contacto = String(data.get("contacto") ?? "").trim();
+
+    if (!ES_EMAIL.test(contacto) && !ES_TELEFONO.test(contacto)) {
+      setEstado("error");
+      setErrorMsg("Ingresa un correo electrónico o un número de teléfono válido.");
+      return;
+    }
+
+    setEstado("loading");
+
     const payload = {
       nombre: data.get("nombre"),
-      correo: data.get("correo"),
+      contacto,
       mensaje: data.get("mensaje"),
     };
 
@@ -74,14 +86,15 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="correo" className="text-xs uppercase tracking-wide text-ink/50">
-          Correo
+        <label htmlFor="contacto" className="text-xs uppercase tracking-wide text-ink/50">
+          Correo o teléfono
         </label>
         <input
-          id="correo"
-          name="correo"
-          type="email"
+          id="contacto"
+          name="contacto"
+          type="text"
           required
+          placeholder="tu@correo.com o +56 9 1234 5678"
           className="mt-2 w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-base text-ink outline-none transition-colors focus:border-walnut-500"
         />
       </div>

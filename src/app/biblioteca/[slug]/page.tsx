@@ -109,7 +109,7 @@ export default async function ArticuloDetailPage({
   };
 
   return (
-    <article className="bg-trama bg-paper pb-24 pt-32 lg:pb-36 lg:pt-36">
+    <article className="bg-trama bg-paper pb-16 pt-24 lg:pb-20 lg:pt-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

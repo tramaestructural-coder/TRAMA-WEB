@@ -18,23 +18,8 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
   const siguiente = () => setIndex((i) => (i + 1) % total);
 
   return (
-    <article className="bg-trama bg-paper pb-16 pt-28 lg:pb-24 lg:pt-32">
-      {proyecto.heroVideo && (
-        <div className="relative h-[50vh] min-h-[360px] w-full bg-espresso-500">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={proyecto.cover}
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src={proyecto.heroVideo} type="video/mp4" />
-          </video>
-        </div>
-      )}
-
-      <Container className={proyecto.heroVideo ? "mt-14" : "mt-6"}>
+    <article className="bg-trama bg-paper pb-12 pt-24 lg:pb-16 lg:pt-24">
+      <Container className="mt-6">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6 border-b border-stone-300 pb-6">
             <div>
@@ -78,7 +63,7 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-stone-200">
+          <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-stone-200 lg:aspect-auto lg:h-[600px]">
             <Image
               src={imagenes[index] ?? proyecto.cover}
               alt={`${proyecto.titulo} — imagen ${index + 1}`}
@@ -109,9 +94,9 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
             )}
           </div>
 
-          <div className="flex flex-col lg:min-h-full">
+          <div className="flex flex-col lg:h-[600px]">
             {proyecto.descripcion && (
-              <div>
+              <div className="shrink-0">
                 <h2 className="text-xs uppercase tracking-widest text-ink/40">
                   Descripción
                 </h2>
@@ -121,8 +106,12 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
               </div>
             )}
 
+            {/* Miniaturas: sin límite de fotos. En desktop ocupa el espacio
+                restante junto a la imagen principal y hace scroll interno si
+                no alcanzan todas, para que la ficha siga cabiendo en el
+                primer viewport. */}
             {total > 1 && (
-              <div className="mt-8 grid grid-cols-4 gap-3 sm:grid-cols-5 lg:mt-auto lg:pt-8">
+              <div className="mt-8 grid grid-cols-4 gap-3 content-start sm:grid-cols-5 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pt-8">
                 {imagenes.map((src, i) => (
                   <button
                     key={src + i}

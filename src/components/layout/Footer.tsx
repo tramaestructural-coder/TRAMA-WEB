@@ -5,37 +5,7 @@ import { equipo } from "@/data/equipo";
 
 export function Footer() {
   return (
-    <footer className="bg-trama relative overflow-hidden border-t border-stone-200 bg-espresso-500 text-paper">
-      {/* Motivo "trama": grilla estructural sutil, referencia directa al
-          isotipo T+E del manual de marca (patrones repetitivos). */}
-      <svg
-        aria-hidden
-        className="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] opacity-[0.06]"
-        viewBox="0 0 200 200"
-        fill="none"
-      >
-        {Array.from({ length: 9 }).map((_, i) => (
-          <line
-            key={`v-${i}`}
-            x1={i * 25}
-            y1="0"
-            x2={i * 25}
-            y2="200"
-            stroke="currentColor"
-          />
-        ))}
-        {Array.from({ length: 9 }).map((_, i) => (
-          <line
-            key={`h-${i}`}
-            x1="0"
-            y1={i * 25}
-            x2="200"
-            y2={i * 25}
-            stroke="currentColor"
-          />
-        ))}
-      </svg>
-
+    <footer className="relative overflow-hidden border-t border-stone-200 bg-espresso-500 text-paper">
       <div className="relative mx-auto max-w-content px-6 py-16 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>

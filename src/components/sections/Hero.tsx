@@ -13,7 +13,6 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="/images/proyectos/depto-kennedy/cover.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/video/hero.mp4" type="video/mp4" />

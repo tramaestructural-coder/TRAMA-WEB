@@ -5,11 +5,15 @@ type Variant = "primary" | "secondary" | "accent" | "light";
 type Size = "sm" | "md";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-espresso-500 text-paper hover:bg-walnut-500",
+  // Estado normal: relleno café institucional con buen contraste. Hover:
+  // fondo transparente conservando el borde, para que nunca se confunda
+  // con el fondo de la página.
+  primary:
+    "border-2 border-espresso-500 bg-espresso-500 text-paper hover:bg-transparent hover:text-espresso-500",
   secondary: "border border-current/30 bg-transparent hover:border-current",
   accent: "bg-celeste text-ink hover:bg-celeste/80",
   // Variante clara para usarse sobre fondos oscuros (ej. el Hero con video).
-  light: "bg-paper text-ink hover:bg-sage-300",
+  light: "border-2 border-paper bg-paper text-ink hover:bg-transparent hover:text-paper",
 };
 
 const sizeClasses: Record<Size, string> = {

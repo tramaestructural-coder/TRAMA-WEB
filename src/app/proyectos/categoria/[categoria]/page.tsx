@@ -12,7 +12,12 @@ import {
   CasasIcon,
   ConceptualesIcon,
 } from "@/components/icons/CategoriaIcons";
-import { proyectos, categoriaSlugs, type Categoria } from "@/data/proyectos";
+import {
+  proyectos,
+  categoriaSlugs,
+  categoriaDescripciones,
+  type Categoria,
+} from "@/data/proyectos";
 
 const categoriaIcons: Record<Categoria, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   "Proyectos comerciales": ComercialesIcon,
@@ -62,7 +67,7 @@ export default async function CategoriaPage({
     .sort((a, b) => a.orden - b.orden);
 
   return (
-    <section className="bg-trama bg-paper pb-16 pt-28 lg:pb-24 lg:pt-32">
+    <section className="bg-trama bg-paper pb-12 pt-24 lg:pb-20 lg:pt-28">
       <Container>
         <Reveal>
           <Link
@@ -82,8 +87,8 @@ export default async function CategoriaPage({
               {categoria}
             </h1>
           </div>
-          <p className="mt-6 max-w-xl text-base italic leading-relaxed text-ink/50">
-            Descripción de la categoría — próximamente.
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
+            {categoriaDescripciones[categoria]}
           </p>
         </Reveal>
 

@@ -6,19 +6,24 @@ export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
 
   const nombre = typeof body?.nombre === "string" ? body.nombre.trim() : "";
-  const correo = typeof body?.correo === "string" ? body.correo.trim() : "";
+  const contacto = typeof body?.contacto === "string" ? body.contacto.trim() : "";
   const mensaje = typeof body?.mensaje === "string" ? body.mensaje.trim() : "";
 
-  if (!nombre || !correo || !mensaje) {
+  if (!nombre || !contacto || !mensaje) {
     return NextResponse.json(
       { error: "Faltan campos obligatorios." },
       { status: 400 }
     );
   }
 
-  const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
-  if (!correoValido) {
-    return NextResponse.json({ error: "Correo inválido." }, { status: 400 });
+  // El campo de contacto acepta indistintamente correo o teléfono.
+  const esEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contacto);
+  const esTelefono = /^[+]?[\d\s\-()]{7,20}$/.test(contacto);
+  if (!esEmail && !esTelefono) {
+    return NextResponse.json(
+      { error: "Ingresa un correo electrónico o un teléfono válido." },
+      { status: 400 }
+    );
   }
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -39,9 +44,11 @@ export async function POST(request: Request) {
     // Mientras no lo esté, Resend no permite enviar desde esa dirección.
     from: `Formulario web <formulario@${site.domain}>`,
     to: site.contactEmail,
-    replyTo: correo,
+    // replyTo solo puede ser una dirección de correo válida — si la persona
+    // dejó un teléfono, se omite y el equipo lo ve en el cuerpo del mensaje.
+    ...(esEmail ? { replyTo: contacto } : {}),
     subject: `Nuevo contacto desde la web — ${nombre}`,
-    text: `Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`,
+    text: `Nombre: ${nombre}\nCorreo o teléfono: ${contacto}\n\nMensaje:\n${mensaje}`,
   });
 
   if (error) {

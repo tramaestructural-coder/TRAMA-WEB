@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Presentacion() {
   return (
-    <section className="bg-trama bg-paper py-16 lg:py-24">
+    <section className="bg-trama bg-paper py-12 lg:py-20">
       <Container>
         <Reveal>
           <SectionLabel index="01" title="Quiénes somos" />
@@ -24,15 +24,15 @@ export function Presentacion() {
               />
             </div>
             <div className="relative z-10 -mt-4 max-w-md rounded-xl bg-paper/95 p-6 shadow-sm backdrop-blur-sm sm:p-8 lg:absolute lg:left-0 lg:top-1/2 lg:mt-0 lg:max-w-xl lg:-translate-y-1/2">
-              <p className="font-display text-2xl leading-snug text-ink sm:text-3xl">
+              <p className="text-lg font-medium leading-snug text-ink sm:text-xl">
                 Somos un equipo multidisciplinario, integramos arquitectura e
                 ingeniería y nos encargamos de todas las etapas de tu
                 proyecto.
               </p>
-              <p className="mt-4 font-display text-2xl leading-snug text-ink sm:text-3xl">
+              <p className="mt-4 text-lg font-medium leading-snug text-ink sm:text-xl">
                 Diseñamos, Proyectamos y construimos.
               </p>
-              <p className="mt-4 font-display text-2xl leading-snug text-ink sm:text-3xl">
+              <p className="mt-4 text-lg font-medium leading-snug text-ink sm:text-xl">
                 Somos Trama Estructural.
               </p>
             </div>

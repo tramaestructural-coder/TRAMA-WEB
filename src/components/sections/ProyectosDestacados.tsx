@@ -9,7 +9,7 @@ const destacados = [...proyectos].sort((a, b) => a.orden - b.orden).slice(0, 8);
 
 export function ProyectosDestacados() {
   return (
-    <section id="proyectos" className="bg-trama bg-paper py-16 lg:py-24">
+    <section id="proyectos" className="bg-trama bg-paper py-12 lg:py-20">
       <Container>
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6">
