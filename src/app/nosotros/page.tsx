@@ -41,12 +41,10 @@ export default function NosotrosPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.15}>
-              {/* Foto grupal del equipo — pendiente de que el cliente la envíe */}
-              <div className="flex aspect-[16/10] items-center justify-center bg-stone-200 text-xs uppercase tracking-wide text-stone-400 lg:aspect-auto lg:h-full">
-                Foto grupal próximamente
-              </div>
-            </Reveal>
+            {/* Foto grupal del equipo — pendiente de que el cliente la envíe.
+                Se deja la columna vacía (sin recuadro) manteniendo la grilla
+                50/50 lista para cuando se agregue la imagen. */}
+            <div className="hidden lg:block" aria-hidden />
           </div>
         </Container>
       </section>
