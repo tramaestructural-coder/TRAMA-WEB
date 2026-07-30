@@ -20,16 +20,16 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-espresso-700 via-espresso-700/40 to-espresso-700/10" />
 
       <div className="relative z-10 mx-auto w-full max-w-content px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
-        <motion.p
+        <motion.h1
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: easeTrama }}
           className="text-xs uppercase tracking-[0.25em] text-paper/70"
         >
-          Arquitectura · Ingeniería · Construcción
-        </motion.p>
+          Arquitectura, ingeniería y construcción integral en Santiago
+        </motion.h1>
 
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: easeTrama, delay: 0.1 }}
@@ -38,7 +38,7 @@ export function Hero() {
           <span className="block">Diseñamos</span>
           <span className="block">Proyectamos</span>
           <span className="block">Construimos</span>
-        </motion.h1>
+        </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
