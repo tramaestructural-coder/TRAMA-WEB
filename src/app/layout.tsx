@@ -31,6 +31,14 @@ export const metadata: Metadata = {
     siteName: "Trama Estructural",
     locale: "es_CL",
     type: "website",
+    images: [
+      {
+        url: "/images/og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Trama Estructural — Arquitectura, ingeniería y construcción integral",
+      },
+    ],
   },
 };
 

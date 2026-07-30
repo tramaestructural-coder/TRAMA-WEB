@@ -31,7 +31,7 @@ export function ServiciosPreview({
                   href={`/servicios#${servicio.slug}`}
                   className="group flex flex-col items-center gap-3 text-center"
                 >
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full border border-stone-300 text-walnut-500 transition-colors group-hover:border-walnut-500 group-hover:bg-walnut-500 group-hover:text-paper">
+                  <span className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-espresso-500 bg-espresso-500 text-paper transition-colors group-hover:bg-transparent group-hover:text-espresso-500">
                     <Icon className="h-8 w-8" strokeWidth={1.5} aria-hidden />
                   </span>
                   <span className="text-xs uppercase leading-snug tracking-wide text-ink/70">

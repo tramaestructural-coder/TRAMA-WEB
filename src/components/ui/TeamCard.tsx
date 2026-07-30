@@ -30,7 +30,12 @@ export function TeamCard({ miembro }: { miembro: MiembroEquipo }) {
         )}
       </div>
       <div className="mt-4">
-        <h3 className="font-display text-lg text-ink">{miembro.nombre}</h3>
+        <h3 className="font-display text-lg text-ink">
+          {miembro.nombre}
+          <span className="ml-2 text-sm font-sans text-walnut-500">
+            — {miembro.cargo}
+          </span>
+        </h3>
         <p className="text-sm text-ink/60">{miembro.rol}</p>
         <p
           className={

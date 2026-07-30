@@ -111,7 +111,7 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
                 no alcanzan todas, para que la ficha siga cabiendo en el
                 primer viewport. */}
             {total > 1 && (
-              <div className="mt-8 grid grid-cols-4 gap-3 content-start sm:grid-cols-5 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pt-8">
+              <div className="mt-8 grid auto-rows-min grid-cols-4 gap-3 content-start sm:grid-cols-5 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pt-8">
                 {imagenes.map((src, i) => (
                   <button
                     key={src + i}

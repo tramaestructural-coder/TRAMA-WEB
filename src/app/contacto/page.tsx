@@ -16,19 +16,17 @@ export default function ContactoPage() {
   return (
     <section className="bg-trama bg-paper pb-10 pt-20 lg:pb-10 lg:pt-20">
       <Container>
-        <Reveal>
-          <SectionLabel index="00" title="Contacto" />
-          <h1 className="mt-6 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
-            Cuéntanos qué quieres transformar.
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
-            Completa el formulario y te respondemos por correo.
-          </p>
-        </Reveal>
-
-        <div className="mt-8 grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2">
           <Reveal>
-            <ul className="space-y-4 text-sm text-ink/70">
+            <SectionLabel index="00" title="Contacto" />
+            <h1 className="mt-6 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
+              Cuéntanos qué quieres transformar.
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
+              Completa el formulario y te respondemos por correo.
+            </p>
+
+            <ul className="mt-8 space-y-4 text-sm text-ink/70">
               <li>
                 <span className="block text-xs uppercase tracking-wide text-ink/40">
                   Correo

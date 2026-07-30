@@ -90,7 +90,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm text-paper/80">
               {equipo.map((m) => (
                 <li key={m.nombre}>
-                  {m.nombre}
+                  {m.nombre} — {m.cargo}
                   <span className="block text-xs text-paper/50">{m.rol}</span>
                 </li>
               ))}
