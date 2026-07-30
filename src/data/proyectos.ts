@@ -94,7 +94,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "estacionamiento",
-    titulo: "Estacionamiento",
+    titulo: "Estacionamiento Piedra Roja",
     tipologia: "Obra",
     orden: 2,
     categoria: "Exteriores",
@@ -137,7 +137,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "quincho",
-    titulo: "Quincho",
+    titulo: "Quincho Piedra Roja",
     tipologia: "Ampliación",
     orden: 4,
     categoria: "Exteriores",
@@ -181,7 +181,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "casa-jorge",
-    titulo: "Casa Jorge",
+    titulo: "Casa Santo Domingo J.",
     tipologia: "Colaboración",
     orden: 6,
     categoria: "Casas",
@@ -217,7 +217,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "quincho-jorge",
-    titulo: "Quincho Jorge",
+    titulo: "Quincho Santo Domingo",
     tipologia: "Colaboración",
     orden: 7,
     categoria: "Exteriores",
@@ -237,7 +237,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "ampliacion-macarena",
-    titulo: "Ampliación Macarena",
+    titulo: "Ampliación Maitencillo",
     tipologia: "Colaboración",
     orden: 8,
     categoria: "Casas",
@@ -305,7 +305,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "mini-sala-de-ventas",
-    titulo: "Mini Sala de Ventas",
+    titulo: "Mini Sala de Ventas Cerrillos",
     tipologia: "Colaboración",
     orden: 13,
     categoria: "Proyectos comerciales",
@@ -345,7 +345,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "casa-lorena",
-    titulo: "Casa Lorena",
+    titulo: "Casa Santo Domingo L.",
     tipologia: "Colaboración",
     orden: 15,
     categoria: "Casas",
@@ -382,7 +382,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "casa-ignacio",
-    titulo: "Casa Ignacio",
+    titulo: "Casa Casablanca",
     tipologia: "Colaboración",
     orden: 19,
     categoria: "Casas",
@@ -409,7 +409,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "casa-andrea",
-    titulo: "Casa Andrea",
+    titulo: "Casa Santo Domingo A.",
     tipologia: "Colaboración",
     orden: 21,
     categoria: "Casas",
@@ -436,7 +436,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "mini-oficina-modular",
-    titulo: "Mini Oficina Modular",
+    titulo: "Mini Oficina Modular Talca",
     tipologia: "Colaboración",
     orden: 22,
     categoria: "Proyectos comerciales",
@@ -457,7 +457,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "casa-leonardo",
-    titulo: "Casa Leonardo",
+    titulo: "Casa Puerto Varas",
     tipologia: "Colaboración",
     orden: 25,
     categoria: "Casas",
@@ -479,7 +479,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "cabana-pedro",
-    titulo: "Cabaña Pedro",
+    titulo: "Cabaña Santo Domingo",
     tipologia: "Colaboración",
     orden: 26,
     categoria: "Casas",
@@ -501,7 +501,7 @@ export const proyectos: Proyecto[] = [
   },
   {
     slug: "casa-pedro",
-    titulo: "Casa Pedro",
+    titulo: "Casa Santo Domingo P.",
     tipologia: "Colaboración",
     orden: 28,
     categoria: "Casas",
