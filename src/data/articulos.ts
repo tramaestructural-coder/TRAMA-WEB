@@ -1368,6 +1368,11 @@ export const articulos: Articulo[] = [
       { tipo: "parrafo", texto: "En Trama Estructural trabajamos con módulos de hasta 3,48 metros de ancho y 14 metros de largo — la medida máxima que permite trasladarlos en camión sin necesitar escoltas especiales en la carretera." },
       { tipo: "parrafo", texto: "Cuando un proyecto necesita más superficie que eso, la solución no es reducir el diseño: se resuelve uniendo varios módulos entre sí." },
       { tipo: "parrafo", texto: "Así se mantiene la libertad arquitectónica completa, sin depender de un transporte especial ni de un único módulo de gran tamaño." },
+      {
+        tipo: "imagen",
+        src: "/images/biblioteca/vale-la-pena-modular-transporte.jpg",
+        alt: "Módulo de una vivienda de Trama Estructural siendo trasladado en camión hasta el terreno",
+      },
       { tipo: "subtitulo", texto: "El diseño sigue siendo lo más importante" },
       { tipo: "parrafo", texto: "Existe un error frecuente." },
       { tipo: "parrafo", texto: "Pensar que elegir una casa modular significa elegir un modelo de catálogo." },
