@@ -21,7 +21,7 @@ export default function PoliticaDePrivacidadPage() {
             Cómo tratamos tus datos en este sitio.
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-ink/50">
-            Última actualización: 28 de julio de 2026.
+            Última actualización: 3 de agosto de 2026.
           </p>
         </Reveal>
 
@@ -45,6 +45,14 @@ export default function PoliticaDePrivacidadPage() {
               puede incluir señales asociadas a tu cuenta de Google cuando estás
               conectado a ella en tu navegador. No usamos esta información para
               identificarte individualmente.
+            </p>
+            <p className="text-base leading-relaxed text-ink/70">
+              <strong className="text-ink">Mapas de calor y grabaciones de sesión.</strong>{" "}
+              También usamos Microsoft Clarity para entender, de forma agregada, cómo
+              interactúan los visitantes con el sitio (clics, scroll y grabaciones de
+              sesión). El texto que escribes en campos como el formulario de contacto se
+              enmascara automáticamente antes de guardarse — Clarity no registra el
+              contenido real de lo que escribes.
             </p>
             <p className="text-base leading-relaxed text-ink/70">
               <strong className="text-ink">Datos del formulario de contacto.</strong>{" "}
