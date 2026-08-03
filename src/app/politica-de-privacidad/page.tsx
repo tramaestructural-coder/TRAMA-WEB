@@ -80,9 +80,9 @@ export default function PoliticaDePrivacidadPage() {
             <h2 className="font-display text-xl text-ink">Con quién se comparten</h2>
             <p className="text-base leading-relaxed text-ink/70">
               Los datos de navegación se procesan a través de Google Analytics
-              (Google LLC), bajo sus propias políticas de privacidad. No
-              vendemos ni compartimos tus datos con terceros para fines
-              comerciales o publicitarios.
+              (Google LLC) y Microsoft Clarity (Microsoft Corporation), bajo
+              sus propias políticas de privacidad. No vendemos ni compartimos
+              tus datos con terceros para fines comerciales o publicitarios.
             </p>
           </div>
 
