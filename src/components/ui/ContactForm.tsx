@@ -22,6 +22,7 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
     const contacto = String(data.get("contacto") ?? "").trim();
+    const sitioWeb = String(data.get("sitio_web") ?? "").trim();
 
     if (!ES_EMAIL.test(contacto) && !ES_TELEFONO.test(contacto)) {
       setEstado("error");
@@ -35,6 +36,7 @@ export function ContactForm() {
       nombre: data.get("nombre"),
       contacto,
       mensaje: data.get("mensaje"),
+      sitio_web: sitioWeb,
     };
 
     try {
@@ -72,6 +74,23 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot anti-spam: invisible para personas, pero un bot que
+          autocompleta formularios genéricos suele rellenarlo. Fuera de
+          pantalla en vez de display:none, que algunos bots sí detectan.
+          El contenedor relative+overflow-hidden+h-0/w-0 evita que el input
+          desplazado a -9999px genere scroll horizontal en la página. */}
+      <div aria-hidden="true" className="relative h-0 w-0 overflow-hidden">
+        <label htmlFor="sitio_web">Sitio web</label>
+        <input
+          id="sitio_web"
+          name="sitio_web"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          className="absolute -left-[9999px]"
+        />
+      </div>
+
       <div>
         <label htmlFor="nombre" className="text-xs uppercase tracking-wide text-ink/50">
           Nombre

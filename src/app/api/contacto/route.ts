@@ -5,6 +5,13 @@ import { site } from "@/lib/config";
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
 
+  // Honeypot anti-spam: campo invisible que solo un bot rellenaría. Se
+  // responde 200 OK igual, sin delatarlo, pero no se envía el correo real.
+  const sitioWeb = typeof body?.sitio_web === "string" ? body.sitio_web.trim() : "";
+  if (sitioWeb) {
+    return NextResponse.json({ ok: true });
+  }
+
   const nombre = typeof body?.nombre === "string" ? body.nombre.trim() : "";
   const contacto = typeof body?.contacto === "string" ? body.contacto.trim() : "";
   const mensaje = typeof body?.mensaje === "string" ? body.mensaje.trim() : "";
