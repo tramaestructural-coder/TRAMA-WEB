@@ -30,7 +30,7 @@ export function Presentacion() {
                 proyecto.
               </p>
               <p className="mt-4 text-lg font-medium leading-snug text-ink sm:text-xl">
-                Diseñamos, Proyectamos y construimos.
+                Diseñamos, proyectamos y construimos.
               </p>
               <p className="mt-4 text-lg font-medium leading-snug text-ink sm:text-xl">
                 Somos Trama Estructural.

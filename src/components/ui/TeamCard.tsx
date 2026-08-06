@@ -37,6 +37,9 @@ export function TeamCard({ miembro }: { miembro: MiembroEquipo }) {
           </span>
         </h3>
         <p className="text-sm text-ink/60">{miembro.rol}</p>
+        <p className="text-xs uppercase tracking-wide text-ink/40">
+          {miembro.universidad}
+        </p>
         <p
           className={
             miembro.bio

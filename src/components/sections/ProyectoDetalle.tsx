@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/Button";
 import type { Proyecto } from "@/data/proyectos";
 import { evaluacionHref } from "@/lib/config";
 
+const SWIPE_THRESHOLD = 40;
+
 export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
   const imagenes = proyecto.imagenes.length > 0 ? proyecto.imagenes : [proyecto.cover];
   const [index, setIndex] = useState(0);
@@ -16,6 +18,38 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
 
   const anterior = () => setIndex((i) => (i - 1 + total) % total);
   const siguiente = () => setIndex((i) => (i + 1) % total);
+
+  // Deslizar para cambiar de foto: pointer events cubren touch (celular) y
+  // arrastre con mouse; wheel cubre el gesto de dos dedos del trackpad (Mac),
+  // que el navegador entrega como deltaX en vez de eventos touch.
+  const dragStart = useRef<{ x: number; y: number } | null>(null);
+  const wheelLocked = useRef(false);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    dragStart.current = { x: e.clientX, y: e.clientY };
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    const start = dragStart.current;
+    dragStart.current = null;
+    if (!start || total <= 1) return;
+    const dx = e.clientX - start.x;
+    const dy = e.clientY - start.y;
+    if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) siguiente();
+    else anterior();
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    if (total <= 1 || wheelLocked.current) return;
+    if (Math.abs(e.deltaX) < 15 || Math.abs(e.deltaX) < Math.abs(e.deltaY)) return;
+    wheelLocked.current = true;
+    if (e.deltaX > 0) siguiente();
+    else anterior();
+    setTimeout(() => {
+      wheelLocked.current = false;
+    }, 400);
+  };
 
   return (
     <article className="bg-trama bg-paper pb-12 pt-24 lg:pb-16 lg:pt-24">
@@ -63,12 +97,19 @@ export function ProyectoDetalle({ proyecto }: { proyecto: Proyecto }) {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-stone-200 lg:aspect-auto lg:h-[600px]">
+          <div
+            className="relative aspect-square w-full touch-pan-y select-none overflow-hidden rounded-2xl bg-stone-200 lg:aspect-auto lg:h-[600px]"
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
+            onWheel={handleWheel}
+            onDragStart={(e) => e.preventDefault()}
+          >
             <Image
               src={imagenes[index] ?? proyecto.cover}
               alt={`${proyecto.titulo} — imagen ${index + 1}`}
               fill
               priority
+              draggable={false}
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="object-cover"
             />

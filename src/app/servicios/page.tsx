@@ -23,7 +23,7 @@ export default function ServiciosPage() {
       <section className="bg-trama bg-paper pb-16 pt-24 lg:pb-20 lg:pt-28">
         <Container>
           <Reveal>
-            <SectionLabel index="00" title="Servicios" />
+            <SectionLabel index="00" title="Qué hacemos" />
             <h1 className="mt-6 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-5xl">
               Todo lo que hacemos, en un solo equipo.
             </h1>

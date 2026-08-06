@@ -259,24 +259,6 @@ export const proyectos: Proyecto[] = [
     ],
   },
   {
-    slug: "pergola-romeral",
-    titulo: "Pérgola Romeral",
-    tipologia: "Ampliación",
-    orden: 9,
-    categoria: "Exteriores",
-    fichaPendiente: false,
-    ubicacion: "Vitacura, Santiago de Chile",
-    m2: 30,
-    anio: 2024,
-    descripcion:
-      "La intención principal fue extender naturalmente el living hacia el jardín y fortalecer la relación con la cocina. El resultado es un espacio intermedio que mejora la manera de habitar la vivienda, ofreciendo protección, comodidad y una nueva forma de disfrutar el exterior durante todo el año.",
-    cover: "/images/proyectos/pergola-romeral/cover.jpg",
-    imagenes: [
-      "/images/proyectos/pergola-romeral/cover.jpg",
-      "/images/proyectos/pergola-romeral/02.jpg",
-    ],
-  },
-  {
     slug: "casa-algarrobo",
     titulo: "Casa Algarrobo",
     tipologia: "Colaboración",
@@ -322,25 +304,6 @@ export const proyectos: Proyecto[] = [
       "/images/proyectos/mini-sala-de-ventas/02.jpg",
       "/images/proyectos/mini-sala-de-ventas/03.jpg",
       "/images/proyectos/mini-sala-de-ventas/04.jpg",
-    ],
-  },
-  {
-    slug: "pergola-maitencillo",
-    titulo: "Pérgola Maitencillo",
-    tipologia: "Ampliación",
-    orden: 14,
-    categoria: "Exteriores",
-    fichaPendiente: false,
-    ubicacion: "Maitencillo, Puchuncaví",
-    m2: 10,
-    anio: 2022,
-    descripcion:
-      "Esta pérgola representa el primer paso de un proyecto de mayor escala. Su incorporación comenzó a transformar un área poco utilizada en el futuro corazón de la vivienda, donde más adelante se integrarán piscina, deck, mobiliario y jardines para construir un nuevo espacio de encuentro familiar.",
-    cover: "/images/proyectos/pergola-maitencillo/cover.jpg",
-    imagenes: [
-      "/images/proyectos/pergola-maitencillo/cover.jpg",
-      "/images/proyectos/pergola-maitencillo/02.jpg",
-      "/images/proyectos/pergola-maitencillo/03.jpg",
     ],
   },
   {
