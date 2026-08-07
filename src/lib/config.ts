@@ -8,7 +8,7 @@ export const site = {
   instagram: "https://www.instagram.com/trama_estructural",
   instagramHandle: "@trama_estructural",
   contactEmail: "contacto@tramaestructural.cl",
-  whatsappNumber: "56961341036",
+  whatsappNumber: "56967659614",
   whatsappDefaultMessage:
     "Hola Trama Estructural. Me gustaría obtener más información sobre sus servicios y conversar sobre un proyecto. Quedo atento(a). Muchas gracias.",
 };
