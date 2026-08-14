@@ -73,7 +73,12 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    // mr-[90px]: dejar libre la esquina donde vive el botón flotante de
+    // WhatsApp (fixed, bottom-6 right-6, 56px) para que ningún campo del
+    // formulario quede debajo de él en mobile — si no, un tap ahí abre
+    // WhatsApp en vez de enfocar el campo. Se libera desde lg, donde la
+    // columna del formulario ya no ocupa el ancho completo del viewport.
+    <form onSubmit={handleSubmit} className="mr-[90px] space-y-4 lg:mr-0">
       {/* Honeypot anti-spam: invisible para personas, pero un bot que
           autocompleta formularios genéricos suele rellenarlo. Fuera de
           pantalla en vez de display:none, que algunos bots sí detectan.
