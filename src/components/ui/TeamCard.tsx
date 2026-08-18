@@ -13,14 +13,14 @@ function iniciales(nombre: string) {
 export function TeamCard({ miembro }: { miembro: MiembroEquipo }) {
   return (
     <div className="group">
-      <div className="relative aspect-square overflow-hidden bg-stone-200">
+      <div className="relative aspect-[4/5] overflow-hidden">
         {miembro.foto ? (
           <Image
             src={miembro.foto}
             alt={miembro.nombre}
             fill
             sizes="(min-width: 1024px) 33vw, 100vw"
-            className="object-contain object-bottom p-4"
+            className="object-cover"
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 border border-dashed border-stone-400 bg-stone-100 text-stone-400">
